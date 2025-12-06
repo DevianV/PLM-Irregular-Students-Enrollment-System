@@ -1,0 +1,1015 @@
+/**
+ * PLM Irregular Student Enrollment System
+ * Main Stylesheet
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PLM Official Colors */
+:root {
+    --plm-blue: #003366;
+    --plm-light-blue: #0066cc;
+    --plm-gold: #D4AF37;
+    --plm-red: #DC143C;
+    --plm-white: #FFFFFF;
+    --plm-gray: #F5F5F5;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* PLM Header */
+.plm-header {
+    background-color: var(--plm-white);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.plm-header-content {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plm-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 0;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.plm-logo {
+    height: 60px;
+    width: auto;
+}
+
+.plm-title {
+    flex: 1;
+}
+
+.plm-main-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--plm-gold);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.plm-subtitle {
+    font-size: 0.85em;
+    color: #333;
+    margin: 2px 0 0 0;
+}
+
+.plm-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.user-welcome {
+    color: #333;
+    font-size: 0.95em;
+}
+
+.user-welcome strong {
+    color: var(--plm-blue);
+}
+
+.plm-header-line {
+    height: 4px;
+    background: linear-gradient(to right, var(--plm-red) 0%, var(--plm-red) 50%, var(--plm-light-blue) 50%, var(--plm-light-blue) 100%);
+    margin-top: 10px;
+}
+
+/* Login Page Background */
+body.login-page {
+    background-color: var(--plm-gray);
+    background-image: url('images/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+body.login-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.85) 0%, rgba(0, 102, 204, 0.85) 100%);
+    z-index: 0;
+}
+
+body.login-page .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    padding-left: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Login Page */
+.login-box {
+    max-width: 480px;
+    margin: 30px auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1;
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-logo img {
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-title {
+    color: var(--plm-blue);
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.login-subtitle {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #666;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--plm-light-blue);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--plm-light-blue);
+    color: white;
+    width: 100%;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: var(--plm-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.3);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+/* Dashboard */
+.dashboard-header {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--plm-light-blue);
+}
+
+.dashboard-header h1 {
+    color: var(--plm-blue);
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--plm-light-blue);
+    background-color: #f0f0f0;
+}
+
+.tab-btn.active {
+    color: var(--plm-light-blue);
+    border-bottom-color: var(--plm-light-blue);
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    color: var(--plm-blue);
+}
+
+.tab-content {
+    min-height: 300px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.info-item span {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.status-badge.enrolled {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.not-enrolled {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.passed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.failed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Tables */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table thead {
+    background-color: var(--plm-blue);
+    color: white;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.no-data {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+    font-style: italic;
+}
+
+/* Dashboard Actions */
+.dashboard-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Make all dashboard action buttons consistent */
+.dashboard-actions .btn {
+    width: auto;
+    min-width: 200px;
+    font-size: 18px;
+    padding: 15px 30px;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dashboard-actions .btn-primary {
+    background-color: var(--plm-light-blue);
+    color: white;
+}
+
+.dashboard-actions .btn-primary:hover {
+    background-color: var(--plm-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.dashboard-actions .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.dashboard-actions .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.dashboard-actions .btn-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.dashboard-actions .btn-warning:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+.dashboard-actions .btn-disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Enrollment Page */
+.enrollment-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.enrollment-header {
+    margin-bottom: 30px;
+}
+
+.enrollment-header h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.selected-subjects {
+    margin-bottom: 30px;
+}
+
+.selected-subjects h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.subject-list {
+    list-style: none;
+}
+
+.subject-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-left: 4px solid var(--plm-light-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subject-item-info {
+    flex: 1;
+}
+
+.subject-item-info strong {
+    color: var(--plm-light-blue);
+}
+
+.subject-item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.available-subjects {
+    margin-top: 30px;
+}
+
+.available-subjects h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.subject-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.subject-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.subject-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.subject-card-title {
+    flex: 1;
+}
+
+.subject-card-title h4 {
+    color: var(--plm-light-blue);
+    margin-bottom: 5px;
+}
+
+.subject-card-title p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.units-badge {
+    background-color: #e7f3ff;
+    color: var(--plm-light-blue);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.section-list {
+    margin-top: 15px;
+}
+
+.section-item {
+    padding: 10px;
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-info {
+    flex: 1;
+}
+
+.section-info span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+}
+
+.total-units {
+    background: #e7f3ff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--plm-light-blue);
+}
+
+.enrollment-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+    margin: auto;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    color: #333;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* SER Page */
+.ser-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+}
+
+.ser-actions {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ser-actions .btn {
+    min-width: 150px;
+}
+
+/* PLM Header for SER */
+.ser-plm-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+.ser-plm-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.ser-plm-logo {
+    height: 70px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.ser-plm-title {
+    flex: 1;
+}
+
+.ser-plm-main-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--plm-gold);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.ser-plm-subtitle {
+    font-size: 0.9em;
+    color: #333;
+    margin: 3px 0 0 0;
+}
+
+.ser-header-line {
+    height: 4px;
+    background: linear-gradient(to right, var(--plm-red) 0%, var(--plm-red) 50%, var(--plm-light-blue) 50%, var(--plm-light-blue) 100%);
+    margin-top: 10px;
+}
+
+.ser-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--plm-blue);
+    padding-bottom: 20px;
+}
+
+.ser-header h1 {
+    color: var(--plm-blue);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.ser-header h2 {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.ser-student-info {
+    margin-bottom: 30px;
+}
+
+.ser-student-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ser-student-info td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.ser-student-info td:first-child {
+    font-weight: 600;
+    width: 150px;
+}
+
+.ser-subjects {
+    margin-top: 30px;
+}
+
+.ser-subjects table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.ser-subjects th {
+    background-color: var(--plm-blue);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.ser-subjects td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ser-footer {
+    margin-top: 40px;
+    text-align: right;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.ser-footer strong {
+    color: var(--plm-blue);
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    
+    .no-print {
+        display: none;
+    }
+    
+    .ser-container {
+        padding: 20px;
+    }
+}
+
+/* Search and Filter Styles */
+.subjects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-filter-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+}
+
+.cross-program-badge {
+    background-color: var(--plm-gold);
+    color: var(--plm-blue);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.subject-card-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.9em;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* Enrollment Summary Modal */
+.modal-large {
+    max-width: 700px;
+    width: 90%;
+}
+
+.enrollment-summary {
+    margin: 20px 0;
+}
+
+.summary-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.summary-header h4 {
+    margin-bottom: 10px;
+    color: var(--plm-blue);
+}
+
+.summary-subjects {
+    margin-top: 20px;
+}
+
+.summary-subjects h5 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summary-list li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.summary-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.summary-list li strong {
+    color: var(--plm-blue);
+}
+
+.enrollment-warning {
+    color: var(--plm-red);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.enrollment-note {
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Subject Details Modal */
+.subject-details {
+    padding: 10px 0;
+}
+
+.subject-details h4 {
+    color: var(--plm-blue);
+    margin-bottom: 15px;
+}
+
+.details-section {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.details-section h5 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.details-section ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.details-section li {
+    margin: 5px 0;
+}
+

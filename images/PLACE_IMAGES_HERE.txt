@@ -1,0 +1,27 @@
+===========================================
+PLM ENROLLMENT SYSTEM - IMAGE PLACEMENT GUIDE
+===========================================
+
+Place your images in this directory:
+
+1. PLM LOGO
+   File name: plm-logo.png (or .jpg, .svg)
+   Location: images/plm-logo.png
+   Recommended: 200x200px, PNG with transparency
+
+2. LOGIN BACKGROUND
+   File name: login-bg.jpg (or .png)
+   Location: images/login-bg.jpg
+   Recommended: 1920x1080px, JPG format
+
+After placing images, refresh your browser to see them!
+
+Supported formats:
+- Logo: .png, .jpg, .jpeg, .svg
+- Background: .jpg, .jpeg, .png
+
+Note: If images don't appear, check:
+- File names match exactly (case-sensitive)
+- File extensions are correct
+- Images are in the /images folder (not subfolders)
+
